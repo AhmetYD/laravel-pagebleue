@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\models\collaborateur;
+use App\Models\collaborateur;
 use App\Http\Controllers\Controller;
 
 class CollaborateurTableSeeder extends Seeder

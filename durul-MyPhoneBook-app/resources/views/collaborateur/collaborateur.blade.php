@@ -5,7 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Collaborateur') }}</div>
+                <div class="card-header d-flex justify-content-around ">{{ __('Collaborateur') }}
+
+                <form class="ml-auto" action="{{url('/collaborateur/id')}}" method="post">
+                        {{csrf_field()}}
+                        <input type="text" name="search">
+                        <input type="submit" value="Search">
+                    </form>
+
+                <a class="ml-auto" href={{ '/collaborateur/create' }}>AJOUT</a>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,14 +25,10 @@
                     
                     <div class="container">
                     
-                    <form class="ml-auto" action="{{url('/collaborateur/id')}}" method="post">
-                        {{csrf_field()}}
-                        <input type="text" name="search">
-                        <input type="submit" value="Search">
-                    </form>
+                    
                             <br>
                             
-                            <a class="ml-auto" href={{ '/collaborateur/create' }}>AJOUT</a>
+                            
 
                     <br>
                       <table class="table table-striped table-bordered">
