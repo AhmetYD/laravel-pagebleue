@@ -52,7 +52,7 @@
                                 <td>
                                 <a href={{"delete/".$data['id'] }}>DELETE</a>
                                         <br>
-                                <a href={{"/update/".$data['id'] }}>UPDATE</a>
+                                <a href={{"update/".$data['id'] }}>UPDATE</a>
                                 </td>
                             </tr>
                             @endforeach
