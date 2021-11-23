@@ -3,7 +3,18 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header"><?php echo e(__('Collaborateur')); ?></div>
+                <div class="card-header d-flex justify-content-around "><?php echo e(__('Collaborateur')); ?>
+
+
+                <form class="ml-auto" action="<?php echo e(url('/collaborateur/id')); ?>" method="post">
+                        <?php echo e(csrf_field()); ?>
+
+                        <input type="text" name="search">
+                        <input type="submit" value="Search">
+                    </form>
+
+                <a class="ml-auto" href=<?php echo e('/collaborateur/create'); ?>>AJOUT</a>
+                </div>
 
                 <div class="card-body">
                     <?php if(session('status')): ?>
@@ -15,15 +26,10 @@
                     
                     <div class="container">
                     
-                    <form class="ml-auto" action="<?php echo e(url('/collaborateur/id')); ?>" method="post">
-                        <?php echo e(csrf_field()); ?>
-
-                        <input type="text" name="search">
-                        <input type="submit" value="Search">
-                    </form>
+                    
                             <br>
                             
-                            <a class="ml-auto" href=<?php echo e('/collaborateur/create'); ?>>AJOUT</a>
+                            
 
                     <br>
                       <table class="table table-striped table-bordered">

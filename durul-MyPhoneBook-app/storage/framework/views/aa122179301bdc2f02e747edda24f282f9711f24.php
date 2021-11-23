@@ -13,15 +13,18 @@
                         </div>
                     <?php endif; ?>
 
-                    <?php echo e(__('You are logged in!')); ?>
+                    <div class="d-flex justify-content-center">
+                        <?php echo e(__('You are logged in!')); ?>
 
+                    </div>
                     
-                    <div class="home-button">
+                    <div class="home-button d-flex justify-content-center p-2 pl-2">
+                        
                         <br>
                         <form action="<?php echo e(route('entreprise')); ?>" method="get">
                             <button type="submit" class="btn btn-primary">Entreprise</button>
                         </form><br>
-                        <form action="<?php echo e(route('collaborateur')); ?>" method="get">
+                        <form style="padding-left:10px" action="<?php echo e(route('collaborateur')); ?>" method="get">
                             <button type="submit" class="btn btn-primary">Collaborateur</button>
                         </form>
                     </div>
